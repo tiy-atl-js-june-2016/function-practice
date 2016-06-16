@@ -24,21 +24,40 @@
 // Write a function called `sum` that takes two
 // parameters and returns the sum of those 2 numbers.
 
+function sum (x, y) {
+  return x + y;
+};
 
+var sum = function (x, y) {
+  return x + y;
+};
 
 
 // Q2
 // Write a function named `avg` that takes 3 parameters
 // and returns the average of those 3 numbers.
 
-
+var average = function (x, y, z) {
+  return (x + y + z) / 3;
+};
 
 
 // Q3
 // Write a function called `getLength` that takes one
 // parameter (a string) and returns the length
 
+var getLength = function (string) {
+  return string.length;
+};
 
+var myLength = function (string) {
+  var count = 0;
+  while(string[count] !== undefined) {
+    console.log("Count is: " + count + " and letter is: " + string[count]);
+    count++;
+  }
+  return count;
+};
 
 
 // Q4
@@ -47,7 +66,17 @@
 // parameter is greater than the first. Otherwise
 // the function should return `false`.
 
+var greaterThan = function (x, y) {
+  if (y > x) {
+    return true;
+  } else {
+    return false;
+  }
+};
 
+var evenGreaterThan = function (x, y) {
+  return y > x;
+};
 
 
 // Q5
@@ -56,6 +85,9 @@
 // is formated like "Hello, Name!" where *Name*
 // is the parameter that was passed in.
 
+var sayHi = function (name) {
+  return "Hello, " + name + "!";
+};
 
 
 
