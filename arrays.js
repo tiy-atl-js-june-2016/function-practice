@@ -25,8 +25,8 @@ var makeAdder = function (x) {
   };
 };
 
-var addTwo = makeAdder(2);
-console.log(addtwo(3));
+// var addTwo = makeAdder(2);
+// console.log(addtwo(3));
 
 // ======================
 // Our first HOF - Each
@@ -87,6 +87,16 @@ var keepOdds = function (nums) {
   return odds;
 };
 
+var myFilter = function(data, callback) {
+  var result = [];
+  data.forEach(function (item) {
+    if (callback(item)) {
+      result.push(item);
+    }
+  });
+  return result;
+};
+
 var filterEvens = function (nums) {
   return nums.filter(function (number) {
     return number % 2 == 0;
@@ -127,6 +137,14 @@ var cubedNums = function (nums) {
   return result;
 };
 
+var myMap = function (data, callback) {
+  var result = [];
+  data.forEach(function (item) {
+    result.push(callback(item));
+  });
+  return result;
+};
+
 var cubedMap = function (nums) {
   return nums.map(function (number) {
     return number * number * number;
@@ -154,6 +172,24 @@ var arrayMax = function (items) {
   };
   return max;
 };
+
+var reduceMax = function (items) {
+  return items.reduce(function (a, b) {
+    if (a > b) {
+      return a;
+    } else {
+      return b;
+    }
+  });
+};
+
+// var myReduce = function (data, callback) {
+//   var result = null;
+//   data.forEach(function (x) {
+//     result = callback(result, x);
+//   });
+//   return result;
+// };
 
 // ---------------------------
 // 2. Find longest string
